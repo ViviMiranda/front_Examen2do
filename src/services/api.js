@@ -10,13 +10,13 @@ const apiClient = axios.create({
     }
 });
 
-// Funciones para interactuar con la API
+
 export const api = {
     getParticipants: () => apiClient.get('/listado'),
-    searchParticipants: (query) => apiClient.get(`/listado/search?q=${encodeURIComponent(query)}`),
+    searchParticipants: (query) => apiClient.get(`/listado/search?q=${encodeURIComponent(query)}`), 
     getParticipantById: (idParticipante) => {
         console.log('Buscando participante:', idParticipante);
-        return apiClient.get(`/participante/${idParticipante}`);
+        return apiClient.get(`/participante/${idParticipante}`); 
     },
     registerParticipant: (data) => {
         console.log('Enviando datos al servidor:', data);
