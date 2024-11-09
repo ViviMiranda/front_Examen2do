@@ -20,6 +20,6 @@ export const api = {
     },
     registerParticipant: (data) => {
         console.log('Enviando datos al servidor:', data);
-        return apiClient.post('/registro', { participants: data });
+        return apiClient.post('/registro', data);
     }
 };
